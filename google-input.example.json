@@ -1,0 +1,31 @@
+{
+  "_how_to_use": "Copy this file to google-input.json, then paste the business's public Google Business Profile info below. Blank fields fall back to industry-aware defaults. Run: npm run import:google",
+
+  "name": "Volt & Bolt Electric",
+  "category": "Electrician",
+  "website": "voltandbolt.com",
+  "phone": "(615) 555-0199",
+  "address": { "street": "420 Gallatin Ave", "city": "Nashville", "state": "TN", "zip": "37206" },
+  "hours": [
+    { "days": "Mon – Fri", "time": "7:30 AM – 5:30 PM" },
+    { "days": "Saturday", "time": "By appointment" },
+    { "days": "Sunday", "time": "Closed" }
+  ],
+  "rating": 4.8,
+  "reviewCount": 187,
+  "mapsUrl": "https://maps.google.com/?q=Volt+and+Bolt+Electric+Nashville",
+  "placeId": "",
+  "foundedYear": 2014,
+  "license": "Licensed & insured · TN EC #67890",
+  "serviceArea": ["Nashville", "East Nashville", "Franklin", "Brentwood", "Hendersonville"],
+  "services": [],
+  "reviews": [
+    { "author": "Sam P.", "rating": 5, "date": "1 week ago", "body": "Fast, tidy, and fairly priced panel upgrade. Explained everything clearly." },
+    { "author": "Dana L.", "rating": 5, "date": "3 weeks ago", "body": "Installed our EV charger same week. Professional from quote to cleanup." }
+  ],
+  "photos": [],
+  "owner": "Marco Reyes",
+  "ownerRole": "Master Electrician",
+  "theme": { "mode": "light", "accent": "#1f6feb" },
+  "template": ""
+}

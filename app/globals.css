@@ -1,0 +1,362 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ═══════════════════════════════════════════════════════════════════════
+   ATELIER — the default design system for client-template-3.
+   Inspired by Open Studio Venice: architectural, editorial, cinematic.
+   The look is carried by TYPE, SPACE, and IMAGERY — never by cards, shadows,
+   or rounded boxes. These :root tokens ARE the atelier theme; the other three
+   themes (noir / linen / gallery) re-skin them via tokens in app/templates.css.
+   Everything derives from --bg / --fg / --accent, so a client can recolor the
+   whole site from three values.
+   ═══════════════════════════════════════════════════════════════════════ */
+:root {
+  /* The three colors that define the theme. */
+  --bg: #f5f2eb;       /* warm ivory — deliberately NOT white */
+  --fg: #111111;       /* near-black */
+  --accent: #b89d74;   /* muted bronze (overridden inline from theme.accent) */
+  --dark: #151515;     /* optional dark-section / "contrast" base */
+
+  /* derived — recompute automatically from the three above */
+  --fg-dim: color-mix(in srgb, var(--fg) 54%, var(--bg));
+  --fg-faint: color-mix(in srgb, var(--fg) 34%, var(--bg));
+  --hairline: color-mix(in srgb, var(--fg) 13%, transparent);
+  --hairline-strong: color-mix(in srgb, var(--fg) 26%, transparent);
+  --accent-soft: color-mix(in srgb, var(--accent) 14%, transparent);
+
+  /* type — display is set per-template in layout.tsx; these are fallbacks */
+  --font-display: var(--font-cormorant), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --display-weight: 300;        /* very light, breathable */
+  --display-tracking: -0.005em;
+  --display-leading: 0.95;
+
+  /* shape — atelier is hard-edged; ONLY buttons are pills */
+  --radius: 0px;
+  --radius-pill: 999px;
+
+  /* rhythm — massive breathing room (≈180–260px between sections on desktop) */
+  --section-pad: clamp(7rem, 14vw, 16rem);
+  --container: 1280px;
+  --container-text: 720px;      /* readable measure for body copy */
+  --gutter: clamp(1.25rem, 5vw, 4.5rem);
+
+  /* motion — slow, calm, expo-out */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur: 0.6s;
+  --dur-slow: 1s;
+  --dur-slower: 1.3s;
+
+  /* nav glass (only applied once scrolled) */
+  --glass-bg: color-mix(in srgb, var(--bg) 70%, transparent);
+  --glass-blur: 16px;
+}
+
+/* Optional dark base if a client sets theme.mode:"dark". Atelier ships light. */
+.theme-dark {
+  --bg: #151515;
+  --fg: #f5f2eb;
+}
+
+/* ── Section background tones — quiet bands, never boxes ─────────────────── */
+.sec-tone-tint {
+  background: color-mix(in srgb, var(--accent) 6%, var(--bg));
+}
+.sec-tone-muted {
+  background: color-mix(in srgb, var(--fg) 4%, var(--bg));
+}
+.sec-tone-contrast,
+.sec-tone-dark {
+  /* dark band — text + hairlines flip to light, bronze stays */
+  --bg: var(--dark);
+  --fg: #f5f2eb;
+  --fg-dim: rgba(245, 242, 235, 0.62);
+  --fg-faint: rgba(245, 242, 235, 0.4);
+  --hairline: rgba(245, 242, 235, 0.16);
+  --hairline-strong: rgba(245, 242, 235, 0.3);
+  background: var(--bg);
+  color: var(--fg);
+}
+
+/* ── Base (Tailwind preflight handles most resets) ──────────────────────── */
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden; /* hard guard: nothing ever bleeds horizontally */
+}
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   EDITORIAL TYPE
+   Three display sizes + an uppercase label. All wrap safely (overflow-wrap +
+   text-wrap:balance) so a long word or a huge clamp() can never bust its box.
+   ═══════════════════════════════════════════════════════════════════════ */
+.text-display,
+.text-hero,
+.text-h2,
+.text-pull {
+  font-family: var(--font-display), Georgia, "Times New Roman", serif;
+  font-weight: var(--display-weight, 300);
+  overflow-wrap: break-word;
+  text-wrap: balance;
+}
+.text-display {
+  letter-spacing: var(--display-tracking, -0.005em);
+  line-height: var(--display-leading, 0.95);
+}
+.text-hero {
+  /* huge + breathable; floor kept phone-safe to honor the no-bleed mandate */
+  font-size: clamp(2.75rem, 8.5vw, 8.75rem);
+  line-height: 0.9;
+  letter-spacing: -0.012em;
+}
+.text-h2 {
+  font-size: clamp(2.25rem, 5vw, 4.5rem); /* ~36–72px */
+  line-height: 1.02;
+  letter-spacing: -0.008em;
+}
+.text-pull {
+  font-size: clamp(1.9rem, 4.6vw, 4rem); /* magazine pull-quote ~64px */
+  line-height: 1.14;
+  letter-spacing: -0.01em;
+}
+
+.text-eyebrow {
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 0.75rem; /* 12px */
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--fg-dim);
+}
+.lead {
+  font-size: clamp(1.125rem, 1.4vw, 1.375rem); /* 18–22px body */
+  line-height: 1.62;
+  color: var(--fg-dim);
+}
+
+/* ── Color helpers (reliable CSS-var colors) ────────────────────────────── */
+.text-dim { color: var(--fg-dim); }
+.text-faint { color: var(--fg-faint); }
+.text-fg { color: var(--fg); }
+.text-accent { color: var(--accent); }
+
+/* ── Hairlines ──────────────────────────────────────────────────────────── */
+.hairline { border-color: var(--hairline); }
+.hairline-strong { border-color: var(--hairline-strong); }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   BUTTONS — outline pills that don't look like UI. Subtle ink fill on hover
+   (sweeps up from the bottom), no bright colors, no gradients. 48px tall.
+   ═══════════════════════════════════════════════════════════════════════ */
+.btn-primary,
+.btn-ghost {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  height: 48px;
+  padding: 0 1.85rem;
+  border-radius: var(--radius-pill, 999px);
+  border: 1px solid var(--fg);
+  color: var(--fg);
+  background: transparent;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 0.8125rem; /* 13px */
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color var(--dur) var(--ease), border-color var(--dur) var(--ease);
+}
+.btn-primary::before,
+.btn-ghost::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--fg);
+  transform: translateY(100%);
+  transition: transform var(--dur) var(--ease);
+}
+.btn-primary:hover,
+.btn-ghost:hover {
+  color: var(--bg);
+}
+.btn-primary:hover::before,
+.btn-ghost:hover::before {
+  transform: translateY(0);
+}
+.btn-ghost {
+  border-color: var(--hairline-strong);
+  color: var(--fg-dim);
+}
+.btn-ghost:hover {
+  color: var(--bg);
+  border-color: var(--fg);
+}
+
+/* ── Underline-sweep link + uppercase nav link ──────────────────────────── */
+.link-line {
+  position: relative;
+  display: inline-block;
+}
+.link-line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 1px;
+  width: 100%;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--dur-slow) var(--ease);
+}
+.link-line:hover::after { transform: scaleX(1); }
+
+.nav-link {
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 0.8125rem; /* 13px */
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--fg-dim);
+  transition: color var(--dur) var(--ease);
+}
+.nav-link:hover { color: var(--fg); }
+
+/* ── Glass (nav, only when scrolled) ────────────────────────────────────── */
+.glass {
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(140%);
+  backdrop-filter: blur(var(--glass-blur)) saturate(140%);
+  border-bottom: 1px solid var(--hairline);
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .glass { background: color-mix(in srgb, var(--bg) 94%, transparent); }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   LAYOUT HELPERS
+   ═══════════════════════════════════════════════════════════════════════ */
+.u-container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+.u-narrow { max-width: var(--container-text); }
+.u-section { padding-block: var(--section-pad); }
+.u-section-half { padding-block: calc(var(--section-pad) * 0.6); }
+/* Break a child out to full viewport width (edge-to-edge imagery). Safe with
+   body{overflow-x:hidden}. */
+.u-fullbleed {
+  width: 100vw;
+  max-width: 100vw;
+  margin-inline: calc(50% - 50vw);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   REVEAL ANIMATIONS — driven by IntersectionObserver toggling `.is-in`
+   (see components/Reveal.tsx). Pure CSS transitions, so they survive the
+   Claude_Preview rAF throttle that freezes Framer whileInView tweens.
+   ═══════════════════════════════════════════════════════════════════════ */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity var(--dur-slow) var(--ease),
+    transform var(--dur-slow) var(--ease);
+  transition-delay: var(--reveal-delay, 0s);
+  will-change: opacity, transform;
+}
+.reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+/* line-mask reveal: wrap text, apply to the clipping wrapper */
+.reveal-mask { overflow: hidden; }
+.reveal-mask > * {
+  transform: translateY(110%);
+  transition: transform var(--dur-slower) var(--ease);
+  transition-delay: var(--reveal-delay, 0s);
+}
+.reveal-mask.is-in > * { transform: translateY(0); }
+/* slow image reveal: unclips top → bottom */
+.reveal-img {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path var(--dur-slower) var(--ease);
+  transition-delay: var(--reveal-delay, 0s);
+}
+.reveal-img.is-in { clip-path: inset(0 0 0 0); }
+
+/* soft cross-fade for swapping content (e.g. rotating reviews) */
+@keyframes fadeSwap {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
+}
+.fade-swap { animation: fadeSwap var(--dur-slow) var(--ease) both; }
+
+/* FAQ — native <details>, styled editorially (no boxes) */
+.faq-item summary { list-style: none; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-mark {
+  display: inline-block;
+  font-size: 1.5rem;
+  line-height: 1;
+  transition: transform var(--dur) var(--ease);
+}
+.faq-item[open] .faq-mark { transform: rotate(45deg); }
+.faq-item[open] > p { animation: fadeSwap var(--dur) var(--ease) both; }
+
+/* ── Lenis smooth scroll (managed by components/SmoothScroll) ────────────── */
+html.lenis,
+html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+/* ── Reduced motion — show everything, kill movement ────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .reveal,
+  .reveal-mask > *,
+  .reveal-img {
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+  }
+}

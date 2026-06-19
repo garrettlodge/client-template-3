@@ -1,0 +1,182 @@
+{
+  "business": {
+    "name": "Monolith",
+    "tagline": "Where sound becomes *permanent*.",
+    "description": "A recording, mixing, and mastering studio for artists who care how the record feels — not only how it sounds. Analog warmth, modern precision, zero compromise.",
+    "industry": "other",
+    "foundedYear": 2014,
+    "license": "Analog & hybrid recording · Nashville",
+    "domain": "monolith.studio"
+  },
+  "contact": {
+    "phone": "(615) 555-0190",
+    "phoneTel": "+16155550190",
+    "email": "hello@monolith.studio",
+    "address": {
+      "street": "1014 Wedgewood Ave",
+      "city": "Nashville",
+      "state": "TN",
+      "zip": "37203"
+    },
+    "hours": [
+      { "days": "Mon – Fri", "time": "9:00 AM – 11:00 PM" },
+      { "days": "Saturday", "time": "By appointment" },
+      { "days": "Sunday", "time": "Closed" }
+    ],
+    "mapsUrl": "https://maps.google.com/?q=Monolith+Studio+Nashville",
+    "geo": { "lat": 36.1322, "lng": -86.7889 }
+  },
+  "serviceArea": [
+    "Nashville",
+    "East Nashville",
+    "Berry Hill",
+    "Franklin",
+    "Remote — worldwide"
+  ],
+  "services": [
+    {
+      "slug": "recording",
+      "title": "Recording",
+      "blurb": "Tracking in a tuned live room with a vintage console and a mic locker decades in the making."
+    },
+    {
+      "slug": "mixing",
+      "title": "Mixing",
+      "blurb": "In-the-box precision with analog summing — balance, depth, and a finish that translates everywhere."
+    },
+    {
+      "slug": "mastering",
+      "title": "Mastering",
+      "blurb": "The final two percent. Loud, warm, and consistent across vinyl, streaming, and every set of speakers."
+    },
+    {
+      "slug": "production",
+      "title": "Production",
+      "blurb": "From a voice memo to a finished record — arrangement, players, and direction whenever you need it."
+    },
+    {
+      "slug": "vocal-production",
+      "title": "Vocal Production",
+      "blurb": "Comping, tuning, and quiet performance coaching that keeps the take unmistakably human."
+    }
+  ],
+  "reviews": {
+    "rating": 5.0,
+    "count": 120,
+    "source": "Google",
+    "sourceUrl": "https://maps.google.com/?q=Monolith+Studio+Nashville",
+    "items": [
+      {
+        "author": "Maya R.",
+        "rating": 5,
+        "date": "2 weeks ago",
+        "body": "I've recorded in a lot of rooms. None of them felt like this. The mix came back and I genuinely cried — it sounded like the song I'd been hearing in my head for two years."
+      },
+      {
+        "author": "Devon K.",
+        "rating": 5,
+        "date": "1 month ago",
+        "body": "Unhurried, obsessive, and somehow still fast. They protected the feel of the performance instead of polishing it to death."
+      },
+      {
+        "author": "The Wildwood Sessions",
+        "rating": 5,
+        "date": "2 months ago",
+        "body": "We tracked a full EP live to tape. The room, the gear, the ears — every decision made the record better. We're already booking the next one."
+      },
+      {
+        "author": "Priya S.",
+        "rating": 5,
+        "date": "3 months ago",
+        "body": "The masters translate everywhere — the car, the earbuds, the big system. That is rarer than people think, and worth every minute."
+      }
+    ]
+  },
+  "process": [
+    {
+      "n": "01",
+      "title": "Pre-production",
+      "body": "We talk references, arrangement, and intent before anyone hits record, so every session moves with purpose."
+    },
+    {
+      "n": "02",
+      "title": "Tracking",
+      "body": "We capture performances in a room built to sound like a record — patient, present, and uncompromising."
+    },
+    {
+      "n": "03",
+      "title": "Mix",
+      "body": "Balance, depth, and emotion. We mix until the song does what it's supposed to do to a listener."
+    },
+    {
+      "n": "04",
+      "title": "Master & deliver",
+      "body": "Final masters prepared and checked across formats, delivered ready for vinyl, streaming, and sync."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How do you charge — by the hour or the day?",
+      "a": "Most projects run on a day rate, which keeps the focus on the work instead of the clock. For mixing and mastering we quote per song. Tell us about the project and we'll send a clear number up front."
+    },
+    {
+      "q": "Do you offer remote mixing and mastering?",
+      "a": "Yes. Send us your sessions or stems and we'll mix and master from here, with reference calls and revision passes along the way. Most remote clients never set foot in the room."
+    },
+    {
+      "q": "Can we track live as a full band?",
+      "a": "Absolutely — the live room is built for it, with enough isolation to keep bleed musical and enough space to keep a band feeling like a band."
+    },
+    {
+      "q": "What gear do you work on?",
+      "a": "A large-format analog console, a deep collection of outboard and microphones, tape when a song calls for it, and a modern hybrid workflow for everything else. The gear serves the song, never the other way around."
+    },
+    {
+      "q": "How far ahead should we book?",
+      "a": "Two to four weeks is typical for multi-day sessions; single days and remote work can often happen sooner. Reach out and we'll find the right window."
+    }
+  ],
+  "about": {
+    "owner": "Eli Brandt",
+    "ownerRole": "Founder & Engineer",
+    "headline": "We make records that age well.",
+    "photo": null,
+    "paragraphs": [
+      "Monolith began in 2014 with a simple conviction: the room you record in changes the record you make. So we built one — tuned, quiet, and full of instruments and gear chosen over a decade for how they make a song feel.",
+      "We work slowly on purpose. The goal isn't a louder mix or a trendier sound; it's a record that still moves you in ten years. That means protecting the performance, sweating the arrangement, and saying no to anything that doesn't serve the song.",
+      "Most of our work comes from artists who came once and never went anywhere else. That's the only metric we care about."
+    ]
+  },
+  "social": {
+    "google": "https://maps.google.com/?q=Monolith+Studio+Nashville",
+    "instagram": "https://instagram.com/monolith.studio"
+  },
+  "portfolio": {
+    "title": "Selected work",
+    "intro": "A few of the records made in this room.",
+    "items": [
+      { "category": "Album", "caption": "Indie-folk LP — tracked to tape" },
+      { "category": "Single", "caption": "Alt-pop single — mixed in the box" },
+      { "category": "Live session", "caption": "Full-band live take, one room" },
+      { "category": "Score", "caption": "Short-film score — strings + synths" },
+      { "category": "EP", "caption": "Five-song EP — recorded & mixed" },
+      { "category": "Mastering", "caption": "Vinyl master — 180g pressing" }
+    ]
+  },
+  "cta": {
+    "heading": "Let's make something worth keeping.",
+    "body": "Tell us about the record. We'll tell you how we'd approach it — no pressure, no rush.",
+    "primary": "Call (615) 555-0190",
+    "secondary": "Email the studio"
+  },
+  "hero": {
+    "video": null,
+    "poster": null,
+    "overlayOpacity": 0.2
+  },
+  "theme": {
+    "mode": "light",
+    "accent": "#b89d74"
+  },
+  "template": "atelier"
+}

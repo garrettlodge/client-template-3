@@ -1,0 +1,19 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NPM_FLAGS = "--legacy-peer-deps"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Allow embedding only by Mission Control (for the live visual editor's
+    # preview) and the site itself. frame-ancestors replaces X-Frame-Options.
+    Content-Security-Policy = "frame-ancestors 'self' https://mission-control-recstu.fly.dev"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

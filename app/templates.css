@@ -1,0 +1,38 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   RESERVED THEME PALETTES
+   Atelier is the :root default (app/globals.css). These three re-skin the
+   SAME atelier layout via tokens only — so they inherit ALL of atelier's
+   spacing, type scale, and anti-bleed discipline for free. Each is a tasteful
+   starting point; craft into a fully bespoke theme (own sections/type) when
+   briefed, exactly like template-2's per-key overrides.
+
+   Selected by data-template on <html> (set in layout.tsx from
+   site.content.json → `template`). The derived tokens (--fg-dim, hairlines…)
+   recompute automatically from --bg/--fg, and a per-client --accent injected
+   inline in layout.tsx still wins. :root[data-template=…] (specificity 0,2,0)
+   reliably beats the :root defaults regardless of stylesheet order.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* ── Noir — near-black cinematic canvas, gold-on-black ───────────────────── */
+:root[data-template="noir"] {
+  --bg: #151515;
+  --fg: #f5f2eb;
+  --accent: #b89d74;
+  --display-tracking: -0.01em;
+}
+
+/* ── Linen — warm, sand-toned, gallery-soft ─────────────────────────────── */
+:root[data-template="linen"] {
+  --bg: #efe7d8;
+  --fg: #1a1714;
+  --accent: #a9885f;
+  --display-tracking: 0em;
+}
+
+/* ── Gallery — crisp near-white, higher contrast (white-cube) ────────────── */
+:root[data-template="gallery"] {
+  --bg: #fbfaf8;
+  --fg: #0d0d0d;
+  --accent: #b89d74;
+  --display-tracking: -0.015em;
+}

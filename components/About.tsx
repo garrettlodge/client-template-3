@@ -1,7 +1,6 @@
 "use client";
 
 import Reveal from "@/components/Reveal";
-import Eyebrow from "@/components/ui/Eyebrow";
 import { useContent, useEditable } from "@/components/ContentProvider";
 
 /** Two-column About: a large headline (left) and the story (right, capped at a
@@ -16,10 +15,7 @@ export default function About() {
       <div className="u-container grid gap-12 lg:grid-cols-2 lg:gap-20">
         <div className="min-w-0">
           <Reveal>
-            <Eyebrow index="02">About</Eyebrow>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <h2 className="text-h2 mt-7" style={{ maxWidth: "14ch" }} {...ed("about.headline")}>
+            <h2 className="text-h2" style={{ maxWidth: "14ch" }} {...ed("about.headline")}>
               {headline}
             </h2>
           </Reveal>
@@ -49,7 +45,7 @@ export default function About() {
           <Reveal delay={0.1} className="mt-10 flex items-center gap-4">
             <span aria-hidden className="h-px w-10 shrink-0" style={{ background: "var(--accent)" }} />
             <span className="text-eyebrow">
-              {about.owner} — {about.ownerRole}
+              {about.owner}, {about.ownerRole}
             </span>
           </Reveal>
         </div>

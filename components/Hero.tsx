@@ -5,7 +5,7 @@ import Reveal from "@/components/Reveal";
 import { useContent, useEditable } from "@/components/ContentProvider";
 
 /** Render the tagline, turning *asterisk-wrapped* words into italic serif
- *  accents in bronze. */
+ *  accents in bronze (same-family emphasis, per taste-skill). */
 function renderTagline(tagline: string) {
   return tagline
     .split(/(\*[^*]+\*)/g)
@@ -21,9 +21,9 @@ function renderTagline(tagline: string) {
     );
 }
 
-/** Crafted dark backdrop for when a client has no video/poster — soft bronze
+/** Crafted dark backdrop for when a client has no video/poster: soft bronze
  *  light entering a dark room + faint architectural verticals. Always cinematic,
- *  never a flat ivory box. */
+ *  never a flat box. */
 function DefaultBackdrop() {
   return (
     <div className="absolute inset-0" style={{ background: "var(--dark)" }} aria-hidden>
@@ -54,20 +54,17 @@ function DefaultBackdrop() {
 }
 
 export default function Hero() {
-  const { business, contact, hero } = useContent();
+  const { business, hero } = useContent();
   const ed = useEditable();
   const video = hero?.video || null;
   const poster = hero?.poster || null;
   const overlay =
     typeof hero?.overlayOpacity === "number" ? hero.overlayOpacity : 0.15;
-  const est = business.foundedYear ? `Est. ${business.foundedYear}` : "";
-  const place = contact?.address?.city || "";
-  const meta = [est, place].filter(Boolean).join(" — ");
 
   return (
     <section
       id="top"
-      className="sec-tone-dark relative flex min-h-screen flex-col overflow-hidden"
+      className="sec-tone-dark relative flex min-h-[100dvh] flex-col overflow-hidden"
     >
       {/* media / backdrop */}
       <div className="absolute inset-0">
@@ -105,14 +102,8 @@ export default function Hero() {
       {/* content */}
       <div
         className="u-container relative z-10 flex flex-1 flex-col items-center justify-center text-center"
-        style={{ paddingTop: 132, paddingBottom: 120 }}
+        style={{ paddingTop: 96, paddingBottom: 96 }}
       >
-        {meta && (
-          <Reveal delay={0.1} className="mb-9">
-            <span className="text-eyebrow">{meta}</span>
-          </Reveal>
-        )}
-
         <Reveal variant="mask" className="w-full">
           <h1
             className="text-hero mx-auto"
@@ -127,7 +118,7 @@ export default function Hero() {
           </h1>
         </Reveal>
 
-        <Reveal delay={0.45}>
+        <Reveal delay={0.4}>
           <p
             className="lead mx-auto mt-8"
             style={{ maxWidth: "40rem" }}
@@ -137,7 +128,7 @@ export default function Hero() {
           </p>
         </Reveal>
 
-        <Reveal delay={0.6} className="mt-12">
+        <Reveal delay={0.55} className="mt-12">
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a href="#contact" className="btn-primary">
               Get in touch
@@ -147,21 +138,6 @@ export default function Hero() {
             </a>
           </div>
         </Reveal>
-      </div>
-
-      {/* scroll cue */}
-      <div className="absolute inset-x-0 bottom-8 z-10 flex justify-center">
-        <span
-          className="text-eyebrow flex flex-col items-center gap-3"
-          style={{ opacity: 0.65 }}
-        >
-          Scroll
-          <span
-            aria-hidden
-            className="h-10 w-px"
-            style={{ background: "linear-gradient(var(--accent), transparent)" }}
-          />
-        </span>
       </div>
     </section>
   );

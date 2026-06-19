@@ -1,11 +1,10 @@
 "use client";
 
 import Reveal from "@/components/Reveal";
-import Eyebrow from "@/components/ui/Eyebrow";
 import { useContent } from "@/components/ContentProvider";
 
-/** Quiet FAQ — native <details> rows separated by hairlines. A bronze "+"
- *  rotates to "×" on open. No boxes, smooth answer fade. */
+/** Quiet FAQ: native <details> rows separated by hairlines. A bronze "+"
+ *  rotates on open. No boxes, smooth answer fade. */
 export default function FAQ() {
   const { faq } = useContent();
   if (!faq?.length) return null;
@@ -14,8 +13,7 @@ export default function FAQ() {
     <section id="faq" className="u-section">
       <div className="u-container grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
         <Reveal>
-          <Eyebrow index="05">FAQ</Eyebrow>
-          <h2 className="text-h2 mt-7" style={{ maxWidth: "12ch" }}>
+          <h2 className="text-h2" style={{ maxWidth: "12ch" }}>
             Questions, answered.
           </h2>
         </Reveal>

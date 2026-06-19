@@ -2,10 +2,10 @@
   "business": {
     "name": "Monolith",
     "tagline": "Where sound becomes *permanent*.",
-    "description": "A recording, mixing, and mastering studio for artists who care how the record feels — not only how it sounds. Analog warmth, modern precision, zero compromise.",
+    "description": "A recording, mixing, and mastering studio for artists who care how the record feels, not just how it sounds.",
     "industry": "other",
     "foundedYear": 2014,
-    "license": "Analog & hybrid recording · Nashville",
+    "license": "Analog and hybrid recording, Nashville",
     "domain": "monolith.studio"
   },
   "contact": {
@@ -19,7 +19,7 @@
       "zip": "37203"
     },
     "hours": [
-      { "days": "Mon – Fri", "time": "9:00 AM – 11:00 PM" },
+      { "days": "Mon to Fri", "time": "9:00 AM to 11:00 PM" },
       { "days": "Saturday", "time": "By appointment" },
       { "days": "Sunday", "time": "Closed" }
     ],
@@ -31,7 +31,7 @@
     "East Nashville",
     "Berry Hill",
     "Franklin",
-    "Remote — worldwide"
+    "Remote, worldwide"
   ],
   "services": [
     {
@@ -42,7 +42,7 @@
     {
       "slug": "mixing",
       "title": "Mixing",
-      "blurb": "In-the-box precision with analog summing — balance, depth, and a finish that translates everywhere."
+      "blurb": "In-the-box precision with analog summing: balance, depth, and a finish that translates everywhere."
     },
     {
       "slug": "mastering",
@@ -52,7 +52,7 @@
     {
       "slug": "production",
       "title": "Production",
-      "blurb": "From a voice memo to a finished record — arrangement, players, and direction whenever you need it."
+      "blurb": "From a voice memo to a finished record: arrangement, players, and direction whenever you need it."
     },
     {
       "slug": "vocal-production",
@@ -70,7 +70,7 @@
         "author": "Maya R.",
         "rating": 5,
         "date": "2 weeks ago",
-        "body": "I've recorded in a lot of rooms. None of them felt like this. The mix came back and I genuinely cried — it sounded like the song I'd been hearing in my head for two years."
+        "body": "I've recorded in a lot of rooms. None of them felt like this. The mix came back and I genuinely cried. It sounded like the song I'd been hearing in my head for two years."
       },
       {
         "author": "Devon K.",
@@ -82,13 +82,13 @@
         "author": "The Wildwood Sessions",
         "rating": 5,
         "date": "2 months ago",
-        "body": "We tracked a full EP live to tape. The room, the gear, the ears — every decision made the record better. We're already booking the next one."
+        "body": "We tracked a full EP live to tape. The room, the gear, the ears: every decision made the record better. We're already booking the next one."
       },
       {
         "author": "Priya S.",
         "rating": 5,
         "date": "3 months ago",
-        "body": "The masters translate everywhere — the car, the earbuds, the big system. That is rarer than people think, and worth every minute."
+        "body": "The masters translate everywhere: the car, the earbuds, the big system. That is rarer than people think, and worth every minute."
       }
     ]
   },
@@ -101,22 +101,22 @@
     {
       "n": "02",
       "title": "Tracking",
-      "body": "We capture performances in a room built to sound like a record — patient, present, and uncompromising."
+      "body": "We capture performances in a room built to sound like a record: patient, present, and uncompromising."
     },
     {
       "n": "03",
       "title": "Mix",
-      "body": "Balance, depth, and emotion. We mix until the song does what it's supposed to do to a listener."
+      "body": "Balance, depth, and emotion. We mix until the song does what it is supposed to do to a listener."
     },
     {
       "n": "04",
-      "title": "Master & deliver",
+      "title": "Master and deliver",
       "body": "Final masters prepared and checked across formats, delivered ready for vinyl, streaming, and sync."
     }
   ],
   "faq": [
     {
-      "q": "How do you charge — by the hour or the day?",
+      "q": "How do you charge, by the hour or the day?",
       "a": "Most projects run on a day rate, which keeps the focus on the work instead of the clock. For mixing and mastering we quote per song. Tell us about the project and we'll send a clear number up front."
     },
     {
@@ -125,7 +125,7 @@
     },
     {
       "q": "Can we track live as a full band?",
-      "a": "Absolutely — the live room is built for it, with enough isolation to keep bleed musical and enough space to keep a band feeling like a band."
+      "a": "Absolutely. The live room is built for it, with enough isolation to keep bleed musical and enough space to keep a band feeling like a band."
     },
     {
       "q": "What gear do you work on?",
@@ -138,13 +138,13 @@
   ],
   "about": {
     "owner": "Eli Brandt",
-    "ownerRole": "Founder & Engineer",
+    "ownerRole": "Founder and Engineer",
     "headline": "We make records that age well.",
     "photo": null,
     "paragraphs": [
-      "Monolith began in 2014 with a simple conviction: the room you record in changes the record you make. So we built one — tuned, quiet, and full of instruments and gear chosen over a decade for how they make a song feel.",
+      "Monolith began in 2014 with a simple conviction: the room you record in changes the record you make. So we built one, tuned and quiet, full of instruments and gear chosen over a decade for how they make a song feel.",
       "We work slowly on purpose. The goal isn't a louder mix or a trendier sound; it's a record that still moves you in ten years. That means protecting the performance, sweating the arrangement, and saying no to anything that doesn't serve the song.",
-      "Most of our work comes from artists who came once and never went anywhere else. That's the only metric we care about."
+      "Most of our work comes from artists who came once and never went anywhere else. That is the only metric we care about."
     ]
   },
   "social": {
@@ -155,17 +155,17 @@
     "title": "Selected work",
     "intro": "A few of the records made in this room.",
     "items": [
-      { "category": "Album", "caption": "Indie-folk LP — tracked to tape" },
-      { "category": "Single", "caption": "Alt-pop single — mixed in the box" },
+      { "category": "Album", "caption": "Indie-folk LP, tracked to tape" },
+      { "category": "Single", "caption": "Alt-pop single, mixed in the box" },
       { "category": "Live session", "caption": "Full-band live take, one room" },
-      { "category": "Score", "caption": "Short-film score — strings + synths" },
-      { "category": "EP", "caption": "Five-song EP — recorded & mixed" },
-      { "category": "Mastering", "caption": "Vinyl master — 180g pressing" }
+      { "category": "Score", "caption": "Short-film score, strings and synths" },
+      { "category": "EP", "caption": "Five-song EP, recorded and mixed" },
+      { "category": "Mastering", "caption": "Vinyl master, 180g pressing" }
     ]
   },
   "cta": {
     "heading": "Let's make something worth keeping.",
-    "body": "Tell us about the record. We'll tell you how we'd approach it — no pressure, no rush.",
+    "body": "Tell us about the record. We'll tell you how we'd approach it, no pressure, no rush.",
     "primary": "Call (615) 555-0190",
     "secondary": "Email the studio"
   },

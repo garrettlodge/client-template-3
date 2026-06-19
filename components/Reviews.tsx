@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import Reveal from "@/components/Reveal";
-import Eyebrow from "@/components/ui/Eyebrow";
 import { useContent } from "@/components/ContentProvider";
 
 /** Magazine pull-quote reviews. One large rotating quote, name underneath,
@@ -24,16 +23,13 @@ export default function Reviews() {
   return (
     <section id="reviews" className="u-section">
       <div className="u-container">
-        <Reveal className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3">
-          <Eyebrow index="04">
-            {reviews.source ? `${reviews.source} reviews` : "Reviews"}
-          </Eyebrow>
+        <Reveal className="text-center">
           <span className="text-eyebrow">
-            <span className="text-accent">{reviews.rating}</span> ★ · {reviews.count}+ reviews
+            <span className="text-accent">{reviews.rating}</span> ★ · {reviews.count}+ {reviews.source} reviews
           </span>
         </Reveal>
 
-        <figure className="mx-auto mt-14 max-w-4xl text-center">
+        <figure className="mx-auto mt-10 max-w-4xl text-center">
           <blockquote key={idx} className="fade-swap">
             <p
               className="text-display"

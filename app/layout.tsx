@@ -16,13 +16,13 @@ const template = resolveTemplate(siteConfig.template);
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${siteConfig.business.name} — ${plainTagline}`,
+    default: `${siteConfig.business.name} · ${plainTagline}`,
     template: `%s · ${siteConfig.business.name}`,
   },
   description: siteConfig.business.description,
   alternates: { canonical: "/" },
   openGraph: {
-    title: `${siteConfig.business.name} — ${plainTagline}`,
+    title: `${siteConfig.business.name} · ${plainTagline}`,
     description: siteConfig.business.description,
     url: siteUrl,
     siteName: siteConfig.business.name,
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.business.name} — ${plainTagline}`,
+    title: `${siteConfig.business.name} · ${plainTagline}`,
     description: siteConfig.business.description,
     images: ["/og.jpg"],
   },

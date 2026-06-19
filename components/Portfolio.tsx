@@ -1,7 +1,6 @@
 "use client";
 
 import Reveal from "@/components/Reveal";
-import Eyebrow from "@/components/ui/Eyebrow";
 import { useContent } from "@/components/ContentProvider";
 
 /** Asymmetric, alternating work gallery (like an architecture portfolio).
@@ -25,7 +24,7 @@ export default function Portfolio() {
     <section id="work" className="u-section">
       <div className="u-container">
         <Reveal className="max-w-3xl">
-          <Eyebrow index="03">{portfolio.title || "Selected work"}</Eyebrow>
+          <h2 className="text-h2">{portfolio.title || "Selected work"}</h2>
           {portfolio.intro && <p className="lead mt-6">{portfolio.intro}</p>}
         </Reveal>
 

@@ -14,7 +14,7 @@ export default function Services() {
     <section id="services" className="u-section">
       <div className="u-container">
         <Reveal className="max-w-3xl">
-          <Eyebrow index="01">Services</Eyebrow>
+          <Eyebrow>Services</Eyebrow>
           <h2 className="text-h2 mt-7">Considered work, start to finish.</h2>
         </Reveal>
 

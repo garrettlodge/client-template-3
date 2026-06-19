@@ -26,7 +26,7 @@ export default function Contact() {
       <div className="u-container grid gap-14 lg:grid-cols-2 lg:gap-20">
         <div className="min-w-0">
           <Reveal>
-            <Eyebrow index="06">Contact</Eyebrow>
+            <Eyebrow>Contact</Eyebrow>
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="text-h2 mt-7" style={{ maxWidth: "16ch" }} {...ed("cta.heading")}>
